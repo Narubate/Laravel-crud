@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Movie;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 
 class MovieController extends Controller
 {
@@ -46,7 +45,7 @@ class MovieController extends Controller
 
         Movie::create($movie);
 
-        Session::flash('message', 'Success Insert Movie !!');
+        session()->flash('message', 'Success Insert Movie !!');
 
         return redirect('movie');
     }
@@ -95,7 +94,7 @@ class MovieController extends Controller
 
         Movie::find($id)->update($movie);
 
-        Session::flash('message', 'Success update Movie !!');
+        session()->flash('message', 'Success update Movie !!');
 
         return redirect('movie');
     }
@@ -110,7 +109,7 @@ class MovieController extends Controller
     {
         Movie::find($id)->delete();
 
-        Session::flash('message', 'Success Delete Movie !!');
+        session()->flash('message', 'Success Delete Movie !!');
 
         return redirect('movie');
     }
