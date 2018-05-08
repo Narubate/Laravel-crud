@@ -6,7 +6,7 @@ CRUD Laravel 5.6 Sample
 ### Clone Project
 
   ```
-    git clone https://github.com/Narubate/crud-laravel-packages.git
+    git clone https://github.com/Narubate/crud-laravel.git
   ```
   
 ### Run this step
